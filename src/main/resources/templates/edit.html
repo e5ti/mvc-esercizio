@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MVC Web application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<h1>Edit a record</h1>
+
+<div>Current ID is: <td th:text="${person.id}"> <b>10 </b></td></div>
+<div>Current name is: <td th:text="${person.firstName}"> John </td></div>
+<div>Current surname is: <td th:text="${person.lastName}"> Smith </td></div>
+<br>
+<form action="update" method="post">
+    Name:<input type="text" name="firstname"><br>
+    Surname:<input type="text" name="lastname"><br>
+    ID:<input type="number" readonly th:value="${person.id}" name="id"><br>
+    <input type="submit" />
+</form>
+
+<a href="list"> Show the list </a>
+
+</body>
+</html>
